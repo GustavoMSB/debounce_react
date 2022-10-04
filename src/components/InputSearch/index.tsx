@@ -3,7 +3,7 @@ import { FiSearch } from "react-icons/fi";
 import { UseDebounce } from "../../hooks/UseDebounce";
 import { Search } from "./styles";
 
-export function InputSearch({ value, onChange }: any) {
+export function InputSearch({ value, onChange, onClick }: any) {
   const [displayValue, setDisplayValue] = useState(value);
   const debounceChange = UseDebounce(onChange, 1000);
 
@@ -20,7 +20,7 @@ export function InputSearch({ value, onChange }: any) {
         onChange={handleChange}
       />
       <button>
-        <FiSearch size={24} />
+        <FiSearch size={24} onClick={() => onClick(displayValue)}/>
       </button>
     </Search>
   );
