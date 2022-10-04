@@ -7,7 +7,7 @@ function App() {
   return (
     <div>
       <h1>Hello World</h1>
-      <InputSearch value={searchParam} onChange={setSearchParam}/>
+      <InputSearch value={searchParam} onChange={setSearchParam} onClick={setSearchParam}/>
       <p>Você está pesquisando por: {searchParam}</p>
     </div>
   )
