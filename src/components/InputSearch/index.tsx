@@ -19,8 +19,8 @@ export function InputSearch({ value, onChange, onClick }: any) {
         value={displayValue}
         onChange={handleChange}
       />
-      <button>
-        <FiSearch size={24} onClick={() => onClick(displayValue)}/>
+      <button onClick={() => onClick(displayValue)}>
+        <FiSearch size={24} />
       </button>
     </Search>
   );
